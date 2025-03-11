@@ -122,6 +122,5 @@ button:hover {
 }
 
 .dark-mode .password-wrapper .toggle-password {
-    color: white;
+    color: rgb(153, 148, 148);
 }
-
