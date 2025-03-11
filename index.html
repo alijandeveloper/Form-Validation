@@ -1,16 +1,16 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Form Validation</title>
+    <title>Professional Form Validation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <form id="signupForm">
-            <h2>Register Here</h2>
+            <h2>Register Now</h2>
+            
             <div class="input-group">
                 <label>Full Name</label>
                 <input type="text" id="name" placeholder="Enter your name">
@@ -22,7 +22,7 @@
                 <input type="email" id="email" placeholder="Enter your email">
                 <span class="error" id="emailError"></span>
             </div>
-
+            
             <div class="input-group">
                 <label>Phone Number</label>
                 <input type="tel" id="phone" placeholder="Enter your phone number">
@@ -32,6 +32,7 @@
             <div class="input-group">
                 <label>Password</label>
                 <input type="password" id="password" placeholder="Enter your password">
+                <span class="strength" id="passwordStrength"></span>
                 <span class="error" id="passwordError"></span>
             </div>
             
@@ -44,6 +45,7 @@
             <button type="submit">Register</button>
             <p id="successMessage" class="success"></p>
         </form>
+        <button id="themeToggle">Toggle Dark Mode</button>
     </div>
     
     <script src="script.js"></script>
