@@ -58,15 +58,19 @@ form.addEventListener('submit', function(event) {
 });
 
 // 👁 Show/Hide Password
-togglePassword.addEventListener('click', () => {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        togglePassword.classList.replace("fa-eye-slash", "fa-eye");
-    } else {
-        passwordInput.type = "password";
-        togglePassword.classList.replace("fa-eye", "fa-eye-slash");
-    }
+document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', function () {
+        const input = this.previousElementSibling; // Get corresponding input field
+        if (input.type === "password") {
+            input.type = "text"; // Show password
+            this.classList.replace("fa-eye-slash", "fa-eye"); // Change icon
+        } else {
+            input.type = "password"; // Hide password
+            this.classList.replace("fa-eye", "fa-eye-slash"); // Change back icon
+        }
+    });
 });
+
 
 // 🌙 Dark Mode Toggle
 themeToggle.addEventListener('click', () => {
