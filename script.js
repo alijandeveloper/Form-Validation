@@ -5,6 +5,8 @@ const phoneInput = document.getElementById('phone');
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirmPassword');
 const successMessage = document.getElementById('successMessage');
+const togglePassword = document.getElementById('togglePassword');
+const themeToggle = document.getElementById('themeToggle');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -48,9 +50,25 @@ form.addEventListener('submit', function(event) {
     }
     
     if (isValid) {
-        successMessage.textContent = 'Registration Successful!';
+        successMessage.textContent = '🎉 Registration Successful!';
         form.reset();
     } else {
         successMessage.textContent = '';
     }
+});
+
+// 👁 Show/Hide Password
+togglePassword.addEventListener('click', () => {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        togglePassword.classList.replace("fa-eye-slash", "fa-eye");
+    } else {
+        passwordInput.type = "password";
+        togglePassword.classList.replace("fa-eye", "fa-eye-slash");
+    }
+});
+
+// 🌙 Dark Mode Toggle
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
 });
