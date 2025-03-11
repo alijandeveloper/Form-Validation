@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -6,67 +8,120 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
+    transition: background 0.5s, color 0.5s;
 }
+
 .container {
     background: rgba(255, 255, 255, 0.2);
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    width: 380px;
     backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
 }
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 .input-group {
     margin-bottom: 20px;
     position: relative;
 }
+
 .input-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 .input-group input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
     font-size: 14px;
+    transition: 0.3s ease-in-out;
 }
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.password-wrapper .toggle-password:hover {
+    color: #000;
+}
+
 .error {
     color: #ff4d4d;
     font-size: 12px;
     position: absolute;
     bottom: -18px;
 }
+
 .strength {
     font-size: 12px;
     margin-top: 5px;
 }
+
 .success {
     color: #4CAF50;
     font-size: 16px;
     text-align: center;
 }
+
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #ff4d4d;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s ease;
 }
+
 button:hover {
     background: #cc0000;
 }
+
 #themeToggle {
     margin-top: 10px;
     background: white;
     color: black;
 }
+
 .dark-mode {
-    background: black;
+    background: #121212;
     color: white;
 }
+
+.dark-mode .container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.dark-mode .password-wrapper .toggle-password {
+    color: white;
+}
+
